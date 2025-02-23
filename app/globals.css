@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer utilities {
+  .border-border {
+    border-color: var(--border);
+  }
+}
 
 @layer base {
   :root {
@@ -62,8 +66,6 @@
     }
   }
 }
-
-
 
 @layer base {
   * {
