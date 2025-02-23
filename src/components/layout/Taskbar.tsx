@@ -3,6 +3,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState } from 'react';
 
+// Define the TaskbarProps interface
+interface TaskbarProps {
+  minimizedWindows: {
+    id: string;
+    title: string;
+    onRestore: () => void;
+  }[];
+}
+
 export default function Taskbar({ minimizedWindows }: TaskbarProps) {
   return (
     <div className="fixed bottom-0 left-0 right-0 h-10 bg-[#c0c0c0] border-t-2 border-[#ffffff] flex items-center px-2 gap-2">
