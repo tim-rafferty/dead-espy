@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Minus, Square, X } from 'lucide-react'
 import { useWindowContext } from './MainLayout'
 
@@ -17,7 +17,7 @@ export default function WindowContainer({
   children,
   defaultPosition = { x: 20, y: 20 }
 }: WindowContainerProps) {
-  const { minimizedWindows, handleMinimize, handleRestore } = useWindowContext()
+  const { minimizedWindows, handleMinimize } = useWindowContext()
   const [position, setPosition] = useState(defaultPosition)
   const [isDragging, setIsDragging] = useState(false)
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 })

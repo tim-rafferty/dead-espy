@@ -1,14 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-
-interface TaskbarProps {
-  minimizedWindows: {
-    id: string
-    title: string
-    onRestore: () => void
-  }[]
-}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useState } from 'react';
 
 export default function Taskbar({ minimizedWindows }: TaskbarProps) {
   return (
